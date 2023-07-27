@@ -1,0 +1,11 @@
+{
+  "name": "hackeroverflow-site",
+  "version": "1.0.0",
+  "description": "This a website that gives you the expereince of being in the ancient era",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Umar Khan",
+  "license": "ISC"
+}
