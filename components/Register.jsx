@@ -33,6 +33,7 @@ const Register = () => {
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 1 }}
+        className="px-5 md:px-0"
       >
         <h1 className="text-[#fed690] text-[36px] pt-[5rem] mb-4 text-center font-playFair">
           A Passage through Time: Embrace India&apos;s Heritage
@@ -48,9 +49,9 @@ const Register = () => {
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 1 }}
-        className="flex flex-col justify-center items-center text-[#fed690] backdrop-blur-sm rounded-lg shadow-2xl w-1/2   py-10 px-5 gap-4"
+        className="flex flex-col justify-center items-center text-[#fed690] backdrop-blur-sm rounded-lg shadow-2xl md:w-1/2   py-10 px-5 gap-4"
       >
-        <div className="flex flex-col gap-2 w-3/4">
+        <div className="flex flex-col gap-2 md:w-3/4">
           <label className="w-full" htmlFor="name">
             Full Name:
           </label>
@@ -61,7 +62,7 @@ const Register = () => {
             id="name"
           />
         </div>
-        <div className="flex flex-col gap-2 w-3/4">
+        <div className="flex flex-col gap-2 md:w-3/4">
           <label className="w-full" htmlFor="email">
             Email:
           </label>
@@ -72,7 +73,7 @@ const Register = () => {
             id="email"
           />
         </div>
-        <div className="flex flex-col gap-2 w-3/4">
+        <div className="flex flex-col gap-2 md:w-3/4">
           <label className="w-full" htmlFor="phone">
             Phone Number:
           </label>
@@ -83,7 +84,7 @@ const Register = () => {
             id="phone"
           />
         </div>
-        <div className="flex flex-col gap-2 w-3/4">
+        <div className="flex flex-col gap-2 md:w-3/4">
           <label className="w-full" htmlFor="country">
             Country:
           </label>

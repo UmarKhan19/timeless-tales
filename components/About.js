@@ -25,14 +25,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full relative h-screen flex flex-col bg-transparent"
+      className="w-full relative min-h-screen md:h-screen flex flex-col bg-transparent"
     >
       <motion.div
         drag
         dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
         whileDrag={{ cursor: "grabbing" }}
         whileHover={{ cursor: "grab" }}
-        className="absolute w-fit translate-y-[50%] top-[25%] right-[10%] flex justify-center items-center"
+        className=" hidden  absolute w-fit translate-y-[50%] top-[25%] right-[10%] md:flex justify-center items-center"
       >
         <Image
           width={200}
@@ -54,6 +54,7 @@ const About = () => {
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 1 }}
+        className="px-3 md:px-0"
       >
         <h2 className="text-[#fed690] text-[36px] pt-[5rem] mb-4 text-center font-playFair">
           Discover India: A Tapestry of Culture and Diversity
@@ -71,7 +72,7 @@ const About = () => {
         transition={{ duration: 1 }}
         drag
         dragConstraints={{ top: -100, bottom: 100, left: -100, right: 600 }}
-        className="text-[#feba44] w-1/2 ml-16 rounded-2xl   mt-28 p-10 backdrop-blur-sm leading-8 cursor-grab"
+        className="text-[#feba44] md:w-1/2 px-5 pb-5  md:ml-16 rounded-2xl   mt-28 md:p-10 backdrop-blur-sm leading-8 cursor-grab"
         whileDrag={{ cursor: "grabbing" }}
       >
         India, a land of captivating diversity and cultural opulence, weaves a

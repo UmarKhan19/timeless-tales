@@ -5,17 +5,17 @@ const Hero = () => {
   return (
     <section
       id=""
-      className="relative w-full hero  flex justify-center items-center  bg-transparent  md:h-[100vh]  "
+      className="relative w-full hero min-h-screen  flex justify-center items-center  bg-transparent  md:h-[100vh]  "
     >
       <div className="bg-hero-img w-full h-full absolute bg-cover brightness-[75%] -z-10"></div>
-      <motion.div className="w-[40%]  py-8 px-8 text-center flex flex-col gap-5 text-[#feba44]">
+      <motion.div className="md:w-[40%] w-full  py-8 px-0 md:px-8 text-center flex flex-col gap-5 text-[#feba44]">
         <motion.h1
           drag
           dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
           initial={{ translateX: "-200%" }}
           animate={{ translateX: 0 }}
           transition={{ duration: 1 }}
-          className="font-playFair leading-[4rem] text-[48px] cursor-grab"
+          className="font-playFair leading-[4rem] text-[24px] md:text-[48px] cursor-grab"
           whileDrag={{ cursor: "grabbing" }}
         >
           Ancient India: A Timeless Odyssey

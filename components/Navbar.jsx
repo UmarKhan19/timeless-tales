@@ -9,13 +9,13 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 100 }}
       transition={{ duration: 2 }}
-      className="fixed w-screen py-3 z-10 font-montserrat  text-[#feba44] flex justify-between  px-16 text-xl backdrop-blur-sm"
+      className="fixed w-screen py-3 z-10 font-montserrat  text-[#feba44] flex justify-between px-8 md:px-16 text-xl backdrop-blur-sm"
     >
       <span>
         <Link href="#">Timeless Tales</Link>
       </span>
 
-      <ul className="flex gap-16 ">
+      <ul className="md:flex gap-16 hidden md:visible ">
         <motion.li whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
           <Link href="#">Home</Link>
         </motion.li>
