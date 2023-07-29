@@ -8,7 +8,7 @@ const Hero = () => {
       className="relative w-full hero min-h-screen  flex justify-center items-center  bg-transparent  md:h-[100vh]  "
     >
       <div className="bg-hero-img w-full h-full absolute bg-cover brightness-[75%] -z-10"></div>
-      <motion.div className="md:w-[40%] w-full  py-8 px-0 md:px-8 text-center flex flex-col gap-5 text-[#feba44]">
+      <motion.div className="lg:w-[40%] md:w-[60%] w-full  py-8 px-0 md:px-8 text-center flex flex-col gap-5 text-[#feba44]">
         <motion.h1
           drag
           dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}

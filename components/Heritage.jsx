@@ -27,14 +27,14 @@ const Heritage = () => {
       id="heritage"
       className="pb-10 min-h-screen relative w-full  flex flex-col gap-14  items-center"
     >
-      <div className="bg-[url('/heritageSection.jpg')] -z-20 absolute h-full object-cover w-full" />
+      <div className="bg-[url('/heritageSection.jpg')] bg-no-repeat -z-20 absolute h-full bg-cover w-full" />
       <motion.div
         ref={ref}
         variants={text}
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 1 }}
-        className=" px-3"
+        className="md:px-5 px-3"
       >
         <h1 className="text-[#fed690] text-[36px] pt-[5rem] mb-4 text-center font-playFair">
           India&apos;s Heritage: A Timeless Legacy
@@ -50,7 +50,7 @@ const Heritage = () => {
         initial="hidden"
         animate={mainControls}
         transition={{ duration: 1 }}
-        className="grid w-full gap-10 md:grid-cols-2 px-4 md:px-32 "
+        className="grid w-full gap-10 lg:grid-cols-2 px-4 md:px-32 "
       >
         {heritageData.map((data, i) => (
           <Card key={i} data={data} id={i} />

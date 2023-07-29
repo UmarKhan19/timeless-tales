@@ -5,6 +5,12 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const About = () => {
+  const isBrowser = () => typeof window !== "undefined";
+  let isMobile = null;
+  if (isBrowser()) {
+    isMobile = window.innerWidth < 768;
+  }
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -22,6 +28,24 @@ const About = () => {
     show: { opacity: 1, x: 0 },
   };
 
+  const attributes = isMobile
+    ? {
+        drag: false,
+        dragConstraints: { left: 0, right: 0 },
+        variants: { text },
+        initial: "hidden",
+        animate: { mainControls },
+      }
+    : {
+        variants: { text },
+        initial: "hidden",
+        animate: { mainControls },
+        transition: { duration: 1 },
+        drag: true,
+        dragConstraints: { top: -100, bottom: 100, left: -100, right: 600 },
+        whileDrag: { cursor: "grabbing" },
+      };
+
   return (
     <section
       id="about"
@@ -32,7 +56,7 @@ const About = () => {
         dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
         whileDrag={{ cursor: "grabbing" }}
         whileHover={{ cursor: "grab" }}
-        className=" hidden  absolute w-fit translate-y-[50%] top-[25%] right-[10%] md:flex justify-center items-center"
+        className=" hidden  absolute w-fit translate-y-[50%] top-[25%] md:right-[5%] lg:flex-row md:flex-col lg:right-[10%] md:flex justify-center items-center"
       >
         <Image
           width={200}
@@ -65,15 +89,9 @@ const About = () => {
         </p>
       </motion.div>
       <motion.p
+        {...attributes}
         ref={ref}
-        variants={text}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 1 }}
-        drag
-        dragConstraints={{ top: -100, bottom: 100, left: -100, right: 600 }}
         className="text-[#feba44] md:w-1/2 px-5 pb-5  md:ml-16 rounded-2xl   mt-28 md:p-10 backdrop-blur-sm leading-8 cursor-grab"
-        whileDrag={{ cursor: "grabbing" }}
       >
         India, a land of captivating diversity and cultural opulence, weaves a
         mesmerizing tapestry of traditions and history. From the majestic
